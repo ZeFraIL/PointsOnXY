@@ -1,0 +1,73 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Left part (ListView) -->
+    <ListView
+        android:id="@+id/point_list"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent" />
+
+    <!-- Central part (Custom View) -->
+    <zeev.fraiman.pointsonxy.CoordinateView
+        android:id="@+id/coordinate_view"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF" />
+
+    <!-- Right part (элементы ввода) -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent">
+
+        <Switch
+            android:id="@+id/input_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Input by numbers" />
+
+        <EditText
+            android:id="@+id/input_x"
+            android:hint="X-coordinate"
+            android:inputType="numberSigned"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/input_y"
+            android:hint="Y-coordinate"
+            android:inputType="number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/add_point_button"
+            android:text="Add point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/clear_button"
+            android:text="Clear all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/save_button"
+            android:text="Save points' data "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/read_button"
+            android:text="Read point's data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>
